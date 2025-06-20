@@ -1,7 +1,7 @@
 # Base Skills
 
-## **[[Robot State and Movement]]**
-[Robot State and Movement](https://github.com/skyequack/Skills/blob/main/README.md#Robot%20State%20and%20Movement)
+## [**Robot State and Movement**](https://github.com/skyequack/Skills?tab=readme-ov-file#robot-state-and-movement-1)
+
 - **get_joint**: Returns current joint values of a robot.
 - **get_pose**: Returns the current pose (position) of the robot’s end effector.
 - **get_zone_pose**: Gets the pose of the robot at a named "zone" (predefined position).
@@ -15,8 +15,7 @@
 - **move_in_trajectory**: Moves the robot through a series of waypoints (trajectory).
 - **save_pose**: Saves the current pose of the robot to a JSON file.
 - **save_joint_angles**: Saves the current joint angles to a JSON file.
-## **[[Object and Vision Skills]]**
-[Object and Vision Skills](https://github.com/skyequack/Skills/blob/main/Object%20and%20Vision%20Skills.md)
+## **[Object and Vision Skills](https://github.com/skyequack/Skills?tab=readme-ov-file#object-and-vision-skills-1)**
 
 - **get_best_match**: Finds the best-matching object name from a list using string similarity.
 - **get_object_list**: Returns the list of detectable objects.
@@ -24,8 +23,8 @@
 - **analyze_camera_frame**: Analyzes the camera feed with a prompt (can perform OCR).
 - **set_context_camera**: Sets which camera is used for context or detection.
 - **compare_images**: Compares two images and returns the difference based on a prompt.
-## **[[Utility Skills]]**
-[Utility Skills](https://github.com/skyequack/Skills/blob/main/Utility%20Skills.md)
+## **[Utility Skills]**(https://github.com/skyequack/Skills?tab=readme-ov-file#utility-skills-1)
+
 - **industry_test**: Moves the robot through a list of poses for a number of cycles (for testing).
 - **recording_object**: Moves the robot through a set of named poses, then returns home.
 - **custom_tour**: Runs a custom tour (sequence of actions) based on a tour name.
@@ -36,8 +35,7 @@
 ---
 # Demo Skills
 
-## **[[Demo and Advanced Skills]]**
-[Demo and Advanced Skills](https://github.com/skyequack/Skills/blob/main/Demo%20and%20Advanced%20Skills.md)
+## **[Demo and Advanced Skills](https://github.com/skyequack/Skills?tab=readme-ov-file#demo-and-advanced-skills-1)**
 
 - **auto_train**: Trains a new object detection model via the webapp. Captures images, labels the object, and optionally forgets old objects. Automates dataset creation and model training for new objects.
 - **update_ply_file**: Updates the background projection or simulation environment for the Dalus viewer by setting a new PLY file and pose.
