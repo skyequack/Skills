@@ -1,4 +1,5 @@
 ## **[[Robot State and Movement]]**
+[Robot State and Movement](https://github.com/skyequack/Skills/blob/main/Robot%20State%20and%20Movement.md)
 - **get_joint**: Returns current joint values of a robot.
 - **get_pose**: Returns the current pose (position) of the robot’s end effector.
 - **get_zone_pose**: Gets the pose of the robot at a named "zone" (predefined position).
@@ -12,7 +13,9 @@
 - **move_in_trajectory**: Moves the robot through a series of waypoints (trajectory).
 - **save_pose**: Saves the current pose of the robot to a JSON file.
 - **save_joint_angles**: Saves the current joint angles to a JSON file.
-## **Object and Vision Skills**
+## **[[Object and Vision Skills]]**
+[Object and Vision Skills](https://github.com/skyequack/Skills/blob/main/Object%20and%20Vision%20Skills.md)
+
 - **get_best_match**: Finds the best-matching object name from a list using string similarity.
 - **get_object_list**: Returns the list of detectable objects.
 - **check_pose**: Gets the position of an object in the robot’s workspace using vision.

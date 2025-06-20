@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robot State and Movement.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Robot State and Movement"
+              "title": "README"
             }
           }
         ]
@@ -184,11 +184,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9bee033a570016f",
+  "active": "f40eebcfb906ec2c",
   "lastOpenFiles": [
-    "base_skills.py.md",
+    "README.md",
+    "README.md",
+    "Object and Vision Skills.md",
     "Robot State and Movement.md",
-    "README.md.md",
     "Welcome.md"
   ]
 }
