@@ -22,7 +22,8 @@
 - **analyze_camera_frame**: Analyzes the camera feed with a prompt (can perform OCR).
 - **set_context_camera**: Sets which camera is used for context or detection.
 - **compare_images**: Compares two images and returns the difference based on a prompt.
-### **Advanced/Utility Skills**
+## **[[Utility Skills]]**
+[Utility Skills](https://github.com/skyequack/Skills/blob/main/Utility%20Skills.md)
 - **industry_test**: Moves the robot through a list of poses for a number of cycles (for testing).
 - **recording_object**: Moves the robot through a set of named poses, then returns home.
 - **custom_tour**: Runs a custom tour (sequence of actions) based on a tour name.

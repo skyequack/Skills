@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Utility Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Utility Skills"
             }
           }
         ]
@@ -187,7 +187,9 @@
   "active": "f40eebcfb906ec2c",
   "lastOpenFiles": [
     "README.md",
-    "README.md",
+    "Utility Skills.md",
+    "Advanced",
+    "hello",
     "Object and Vision Skills.md",
     "Robot State and Movement.md",
     "Welcome.md"
