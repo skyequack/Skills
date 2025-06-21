@@ -46,6 +46,18 @@
 - **feedback_loop**: Runs a feedback-based pick-and-place loop. Counts objects, attempts to pick and place with retries, and uses vision to verify object presence at each step. Provides robust error handling and user feedback.
 - **segmentation_check**: Checks image segmentation and moves the robot to the pose of a segmented object. Useful for validating vision-based object localization and robot movement.
 
+## [Bottle serve](https://github.com/skyequack/Skills?tab=readme-ov-file#Bottle%20serve-1)
+
+- **move_to_pose**: Moves the robot to a specified named pose using the robot movement service.
+- **control_gripper**: Opens or closes the robot’s gripper using the gripper service.
+- **execute_serving**: Executes a full bottle serving sequence, including picking up bottles from predefined locations, serving them, and returning the robot to home positions.
+
+## [Pick and Place](https://github.com/skyequack/Skills?tab=readme-ov-file#Pick%20and%20Place-1)
+
+- **pick_object: Picks up a specified object using the robot. Moves to the home position, detects the object's pose, closes the gripper to grasp the object, and moves to an intermediate or home position.
+- **place_object**: Places an object at a specified pose, on a target object, or in a specified direction. Moves to the drop location, opens the gripper to release the object, and returns to the home position.
+- **clean_table**: Picks up all detected objects (except the bucket) from the workspace and places them in the bin or bucket, effectively cleaning the table.
+
 ---
 
 # Robot State and Movement
@@ -663,6 +675,117 @@ Checks image segmentation and moves the robot to the pose of a segmented object.
 **Usage Example:**  
 ```python
 segmentation_check()._run(object_name="box")
+```
+
+---
+
+# Bottle Serve
+
+### **move_to_pose**
+**Description:**  
+Moves the robot to a specified named pose using the robot movement service. Used for navigating to pick, serve, or home positions during the bottle serving sequence.
+
+**Parameters:**  
+- `pose_name` (str): The name of the pose to move the robot to.
+
+**Returns:**  
+- `str`: Status message indicating the result of the movement.
+
+**Usage Example:**  
+```python
+controller.move_to_pose("home")
+```
+
+---
+
+### **control_gripper**
+**Description:**  
+Opens or closes the robot’s gripper using the gripper service. Used to grasp or release bottles during the serving process.
+
+**Parameters:**  
+- `close` (bool): If True, closes the gripper to grasp an object; if False, opens the gripper to release.
+
+**Returns:**  
+- `str`: Status message indicating the result of the gripper action.
+
+**Usage Example:**  
+```python
+controller.control_gripper(True)   # Close gripper (grab bottle)
+controller.control_gripper(False)  # Open gripper (release bottle)
+```
+
+---
+
+### **execute_serving**
+**Description:**  
+Executes the full bottle serving sequence. The robot moves through a series of predefined poses to pick up bottles, serve them at target locations, and return to home positions, using the gripper to grasp and release bottles as needed.
+
+**Parameters:**  
+- None.
+
+**Returns:**  
+- `str`: Status message indicating the result of the serving sequence.
+
+**Usage Example:**  
+```python
+controller.execute_serving()
+```
+
+---
+
+# Pick and Place
+
+### **pick_object**
+**Description:**  
+Picks up a specified object using the robot. The robot moves to the object's location, closes the gripper to grasp the object, and may move to an intermediate or home position after picking.
+
+**Parameters:**  
+- `object` (str): The name of the object the robot needs to pick up.
+- `robot_to_use` (int, default=1): The robot number to use for this task.
+
+**Returns:**  
+- `str`: Status message indicating the result of the pick operation.
+
+**Usage Example:**  
+```python
+pick_object()._run(object="bottle", robot_to_use=1)
+```
+
+---
+
+### **place_object**
+**Description:**  
+Places an object at a specified pose, on a target object, or in a specified direction. The robot moves to the drop location, opens the gripper to release the object, and may return to the home position.
+
+**Parameters:**  
+- `drop_name` (str, optional): The name of the pose where the robot should place the object.
+- `drop_object` (str, optional): The object on which to place the item.
+- `robot_to_use` (int, default=1): The robot number to use for this task.
+- `direction` (str, optional): The direction in which to place the object.
+
+**Returns:**  
+- `str`: Status message indicating the result of the place operation.
+
+**Usage Example:**  
+```python
+place_object()._run(drop_name="bin_pose", drop_object="bin", robot_to_use=1, direction="left")
+```
+
+---
+
+### **clean_table**
+**Description:**  
+Cleans the table by picking up all detected objects (except the bin or bucket) from the workspace and placing them in the bin or bucket, effectively clearing the workspace.
+
+**Parameters:**  
+- none
+	
+**Returns:**  
+- `str`: Status message indicating the result of the cleaning operation.
+
+**Usage Example:**  
+```python
+clean_table()._run()
 ```
 
 ---
