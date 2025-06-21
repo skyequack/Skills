@@ -46,13 +46,13 @@
 - **feedback_loop**: Runs a feedback-based pick-and-place loop. Counts objects, attempts to pick and place with retries, and uses vision to verify object presence at each step. Provides robust error handling and user feedback.
 - **segmentation_check**: Checks image segmentation and moves the robot to the pose of a segmented object. Useful for validating vision-based object localization and robot movement.
 
-## [Bottle serve](https://github.com/skyequack/Skills?tab=readme-ov-file#Bottle%20serve-1)
+## [Bottle serve](https://github.com/skyequack/Skills?tab=readme-ov-file#bottle-serve-1)
 
 - **move_to_pose**: Moves the robot to a specified named pose using the robot movement service.
 - **control_gripper**: Opens or closes the robot’s gripper using the gripper service.
 - **execute_serving**: Executes a full bottle serving sequence, including picking up bottles from predefined locations, serving them, and returning the robot to home positions.
 
-## [Pick and Place](https://github.com/skyequack/Skills?tab=readme-ov-file#Pick%20and%20Place-1)
+## [Pick and Place](https://github.com/skyequack/Skills?tab=readme-ov-file#pick-and-place-1)
 
 - **pick_object: Picks up a specified object using the robot. Moves to the home position, detects the object's pose, closes the gripper to grasp the object, and moves to an intermediate or home position.
 - **place_object**: Places an object at a specified pose, on a target object, or in a specified direction. Moves to the drop location, opens the gripper to release the object, and returns to the home position.
